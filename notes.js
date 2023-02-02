@@ -1,4 +1,4 @@
-var youtubeApiKey = "AIzaSyArZC4w_ZrUpGsejJW0TBItsl8bm2JQMTs";
+var youtubeApiKey = "AIzaSyArZC4w_ZrUpGsejJW0TBItsl8bm2JQMTs"; //compromised
 
 
 

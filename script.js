@@ -5,6 +5,7 @@
       <input id="add-movie" type="submit" value="Add a Movie!">
 </form> */
 var OMDBKey = "407da853";
+var counter = 0;
 
 function OMDBInfoRequest() {
 
@@ -28,11 +29,16 @@ $("#find-movie").on("click", function(event) {
 function displayInfo(arbitrary) {
     console.log("hey");
     var discoverDiv = $("<div class='discover'>");
+    var imageURL = arbitrary.Poster;
+    var moviePoster = $("<img>").attr("src", imageURL);
+    discoverDiv.append(moviePoster);
     const keys = Object.keys(arbitrary);
     for (const key of keys) {
+        if (counter === 13) break;
         var theDeets = $("<p>").text(arbitrary[key])
         console.log(arbitrary[key]);
         discoverDiv.append(theDeets);
+        counter++;
     }
     $("body").append(discoverDiv);
 }
